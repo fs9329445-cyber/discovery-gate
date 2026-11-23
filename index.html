@@ -1,1 +1,90 @@
 
+```html
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>بوابة الاكتشاف</title>
+<style>
+body{margin:0;font-family:Tahoma;background:#eef6ff;color:#17345b}
+header{background:linear-gradient(120deg,#064b91,#168bd5);color:white;text-align:center;padding:45px 15px}
+header h1{font-size:36px}
+nav{background:white;padding:15px;text-align:center;position:sticky;top:0}
+nav a{color:#0755a5;text-decoration:none;font-weight:bold;margin:10px}
+main{max-width:900px;margin:auto;padding:15px}
+section{background:white;padding:22px;margin:20px 0;border-radius:15px;box-shadow:0 3px 12px #d4e3f2}
+h2{color:#0875bd}
+.item{background:#edf6ff;padding:14px;margin:10px 0;border-radius:10px}
+button{background:#0875bd;color:white;border:0;padding:12px 20px;border-radius:8px;margin:5px;font-size:16px}
+#result{font-weight:bold;color:#0875bd}
+footer{background:#0755a5;color:white;text-align:center;padding:25px;margin-top:25px}
+</style>
+</head>
+<body>
+<header>
+<h1>🌍 بوابة الاكتشاف</h1>
+<p>اكتشف معلومات جديدة وتعرّف على عجائب العالم!</p>
+</header>
+<nav>
+<a href="#facts">معلومات مدهشة</a>
+<a href="#inventions">اختراعات</a>
+<a href="#quiz">اختبر نفسك</a>
+</nav>
+<main>
+<section id="facts">
+<h2>✨ معلومات مدهشة حول العالم</h2>
+<div class="item">🐙 للأخطبوط ثلاثة قلوب.</div>
+<div class="item">🌊 المحيط الهادئ أكبر محيطات العالم.</div>
+<div class="item">🪐 كوكب زحل يتميز بحلقاته الجميلة.</div>
+<div class="item">🐝 النحل يساعد النباتات على التكاثر عن طريق التلقيح.</div>
+<div class="item">🌈 قوس قزح يتكون نتيجة انكسار وانعكاس الضوء في قطرات الماء.</div>
+</section>
+<section id="inventions">
+<h2>💡 اختراعات غيّرت العالم</h2>
+<div class="item"><b>الطباعة:</b> ساعدت على نشر الكتب والمعرفة.</div>
+<div class="item"><b>الهاتف:</b> سهّل التواصل بين الناس.</div>
+<div class="item"><b>الإنترنت:</b> جعل الوصول إلى المعلومات أسرع.</div>
+<div class="item"><b>الطائرة:</b> ساعدت الإنسان على السفر لمسافات بعيدة.</div>
+</section>
+<section id="quiz">
+<h2>🧠 اختبر معلوماتك</h2>
+<p id="question">ما أكبر محيط في العالم؟</p>
+<div id="answers">
+<button onclick="check(0)">الأطلسي</button>
+<button onclick="check(1)">الهادئ</button>
+<button onclick="check(2)">الهندي</button>
+</div>
+<p id="result"></p>
+<button onclick="next()">السؤال التالي</button>
+</section>
+</main>
+<footer>
+<h3>بوابة الاكتشاف</h3>
+<p>إعداد الطالب: فاضل جمعه الحراصي</p>
+<p>الصف: 10/5</p>
+<p>المادة: تقنية المعلومات</p>
+<p>© 2026 جميع الحقوق محفوظة</p>
+</footer>
+<script>
+const questions=[
+{q:"ما أكبر محيط في العالم؟",a:["الأطلسي","الهادئ","الهندي"],c:1},
+{q:"كم عدد قلوب الأخطبوط؟",a:["واحد","اثنان","ثلاثة"],c:2},
+{q:"أي اختراع سهّل التواصل؟",a:["الهاتف","الطائرة","الطباعة"],c:0},
+{q:"ما الكوكب المعروف بالكوكب الأحمر؟",a:["الزهرة","المريخ","زحل"],c:1}
+];
+let current=0;
+function check(n){
+document.getElementById("result").textContent=
+n===questions[current].c?"إجابة صحيحة! أحسنت 🎉":"إجابة غير صحيحة، حاول مرة أخرى!";
+}
+function next(){
+current=(current+1)%questions.length;
+document.getElementById("question").textContent=questions[current].q;
+document.getElementById("answers").innerHTML=questions[current].a.map((a,i)=>'<button onclick="check('+i+')">'+a+'</button>').join("");
+document.getElementById("result").textContent="";
+}
+</script>
+</body>
+</html>
+```
