@@ -7,35 +7,40 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>بوابة الاكتشاف</title>
 <style>
-body{margin:0;font-family:Tahoma,Arial;background:#edf6ff;color:#17345b}
-header{background:linear-gradient(130deg,#064b91,#168bd5);color:white;text-align:center;padding:45px 15px}
-header h1{font-size:36px}
-nav{background:white;padding:15px;text-align:center;position:sticky;top:0;z-index:5;box-shadow:0 2px 8px #ddd}
-nav a{color:#0755a5;text-decoration:none;font-weight:bold;margin:8px}
-main{max-width:1000px;margin:auto;padding:15px}
-h2{color:#0875bd}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
-.card{background:white;border-radius:15px;overflow:hidden;box-shadow:0 4px 12px #d2e3f3}
-.card img{width:100%;height:175px;object-fit:cover;display:block}
-.card div{padding:15px}
-.card h3{color:#0875bd;margin-top:0}
-section{margin:25px 0}
-.quiz{background:white;padding:22px;border-radius:15px;box-shadow:0 4px 12px #d2e3f3}
-button{background:#0875bd;color:white;border:0;padding:12px 20px;border-radius:9px;margin:5px;font-size:16px;cursor:pointer}
-#result{font-weight:bold;color:#0875bd}
-footer{background:#0755a5;color:white;text-align:center;padding:25px;margin-top:30px}
+*{box-sizing:border-box}
+body{margin:0;font-family:Tahoma,Arial;background:#f3f8fc;color:#183653}
+header{background:linear-gradient(135deg,#073b70,#168acb);color:white;text-align:center;padding:55px 15px}
+header h1{font-size:38px;margin:0 0 12px}
+header p{font-size:17px}
+nav{background:white;padding:16px;text-align:center;position:sticky;top:0;z-index:5;box-shadow:0 3px 12px #dce7ef}
+nav a{color:#07558d;text-decoration:none;font-weight:bold;margin:10px}
+main{max-width:1050px;margin:auto;padding:20px}
+h2{color:#07558d;font-size:25px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+.card{background:white;border-radius:17px;overflow:hidden;box-shadow:0 5px 18px #dce7ef;transition:.2s}
+.card:hover{transform:translateY(-4px)}
+.card img{width:100%;height:210px;object-fit:cover;display:block}
+.card div{padding:18px}
+.card h3{color:#0876b5;margin:0 0 10px}
+.card p{line-height:1.9;margin:0}
+section{margin:35px 0}
+.quiz{background:white;padding:25px;border-radius:17px;box-shadow:0 5px 18px #dce7ef}
+button{background:#0876b5;color:white;border:0;padding:12px 20px;border-radius:9px;margin:5px;font-size:16px;cursor:pointer}
+button:hover{background:#064b7b}
+#result{font-weight:bold;color:#0876b5}
+footer{background:#073b70;color:white;text-align:center;padding:30px;margin-top:35px;line-height:2}
 </style>
 </head>
 <body>
 
 <header>
 <h1>🌍 بوابة الاكتشاف</h1>
-<p>اكتشف العالم من حولك وتعلّم أشياء جديدة!</p>
+<p>رحلتك لاكتشاف عجائب العالم والعلوم والاختراعات</p>
 </header>
 
 <nav>
-<a href="#facts">معلومات مدهشة</a>
-<a href="#inventions">اختراعات</a>
+<a href="#facts">عجائب العالم</a>
+<a href="#inventions">الاختراعات</a>
 <a href="#quiz">اختبر نفسك</a>
 </nav>
 
@@ -45,28 +50,28 @@ footer{background:#0755a5;color:white;text-align:center;padding:25px;margin-top:
 <div class="grid">
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1545670723-196ed0954986?w=700" alt="الأخطبوط">
-<div><h3>🐙 الأخطبوط</h3><p>للأخطبوط ثلاثة قلوب، وهو من الكائنات البحرية الذكية.</p></div>
+<img src="https://images.unsplash.com/photo-1545670723-196ed0954986?w=900" alt="الأخطبوط">
+<div><h3>🐙 الأخطبوط</h3><p>للأخطبوط ثلاثة قلوب، ويُعد من أذكى الكائنات البحرية.</p></div>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=700" alt="المحيط">
-<div><h3>🌊 المحيط الهادئ</h3><p>المحيط الهادئ هو أكبر محيطات العالم.</p></div>
+<img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=900" alt="أمواج المحيط">
+<div><h3>🌊 المحيط الهادئ</h3><p>المحيط الهادئ هو أكبر محيطات العالم، ويضم جزرًا كثيرة.</p></div>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1614732484003-ef9881555dc3?w=700" alt="كوكب زحل">
-<div><h3>🪐 كوكب زحل</h3><p>يتميز كوكب زحل بحلقاته الجميلة التي تحيط به.</p></div>
+<img src="https://images.unsplash.com/photo-1614732484003-ef9881555dc3?w=900" alt="كوكب زحل">
+<div><h3>🪐 كوكب زحل</h3><p>يشتهر زحل بحلقاته الواسعة والجميلة التي تحيط به.</p></div>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=700" alt="النحل">
-<div><h3>🐝 النحل</h3><p>يساعد النحل النباتات على التكاثر عن طريق التلقيح.</p></div>
+<img src="https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=900" alt="النحل والعسل">
+<div><h3>🐝 النحل</h3><p>يساعد النحل على تلقيح الأزهار، كما ينتج العسل.</p></div>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=700" alt="الطبيعة">
-<div><h3>🌈 قوس قزح</h3><p>يتكون قوس قزح نتيجة تفاعل ضوء الشمس مع قطرات الماء.</p></div>
+<img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=900" alt="منظر طبيعي بعد المطر">
+<div><h3>🌈 قوس قزح والمطر</h3><p>يظهر قوس قزح عندما يتفاعل ضوء الشمس مع قطرات الماء في الجو.</p></div>
 </div>
 
 </div>
@@ -77,23 +82,23 @@ footer{background:#0755a5;color:white;text-align:center;padding:25px;margin-top:
 <div class="grid">
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=700" alt="الكتب">
-<div><h3>📚 الطباعة</h3><p>ساعدت الطباعة على نشر الكتب والمعرفة بين الناس.</p></div>
+<img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=900" alt="مكتبة الكتب">
+<div><h3>📚 الطباعة</h3><p>ساهمت الطباعة في نشر الكتب والمعرفة وجعلت التعلم أسهل.</p></div>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?w=700" alt="الهاتف">
-<div><h3>📱 الهاتف</h3><p>سهّل التواصل بين الأشخاص مهما ابتعدت المسافات.</p></div>
+<img src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?w=900" alt="هاتف">
+<div><h3>📱 الهاتف</h3><p>غيّر الهاتف طريقة تواصل الناس مع بعضهم حول العالم.</p></div>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=700" alt="التقنية">
-<div><h3>🌐 الإنترنت</h3><p>جعل الوصول إلى المعلومات والتواصل أسرع وأسهل.</p></div>
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=900" alt="تقنيات إلكترونية">
+<div><h3>🌐 الإنترنت</h3><p>سهّل الإنترنت الوصول إلى المعلومات والتواصل والتعلم.</p></div>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=700" alt="الطائرة">
-<div><h3>✈️ الطائرة</h3><p>ساعدت الإنسان على السفر لمسافات بعيدة في وقت أقصر.</p></div>
+<img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=900" alt="طائرة">
+<div><h3>✈️ الطائرة</h3><p>ساعدت الطائرة الإنسان على السفر بين الدول والقارات بسرعة.</p></div>
 </div>
 
 </div>
@@ -115,7 +120,7 @@ footer{background:#0755a5;color:white;text-align:center;padding:25px;margin-top:
 </main>
 
 <footer>
-<h3>🌍 بوابة الاكتشاف</h3>
+<h2 style="color:white">🌍 بوابة الاكتشاف</h2>
 <p>إعداد الطالب: فاضل جمعه الحراصي</p>
 <p>الصف: 10/5</p>
 <p>المادة: تقنية المعلومات</p>
@@ -143,4 +148,4 @@ document.getElementById("result").textContent="";
 </script>
 </body>
 </html>
-``
+```
