@@ -6,31 +6,95 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>بوابة الاكتشاف</title>
+
 <style>
 *{box-sizing:border-box}
-body{margin:0;font-family:Tahoma,Arial;background:#f3f8fc;color:#183653}
-header{background:linear-gradient(135deg,#073b70,#168acb);color:white;text-align:center;padding:55px 15px}
-header h1{font-size:38px;margin:0 0 12px}
-header p{font-size:17px}
-nav{background:white;padding:16px;text-align:center;position:sticky;top:0;z-index:5;box-shadow:0 3px 12px #dce7ef}
-nav a{color:#07558d;text-decoration:none;font-weight:bold;margin:10px}
-main{max-width:1050px;margin:auto;padding:20px}
-h2{color:#07558d;font-size:25px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
-.card{background:white;border-radius:17px;overflow:hidden;box-shadow:0 5px 18px #dce7ef;transition:.2s}
-.card:hover{transform:translateY(-4px)}
-.card img{width:100%;height:210px;object-fit:cover;display:block}
-.card div{padding:18px}
+body{
+ margin:0;font-family:Tahoma,Arial;color:#183653;
+ background:linear-gradient(-45deg,#e5f5ff,#f1edff,#e1faff,#f8efff);
+ background-size:400% 400%;
+ animation:bgMove 16s ease infinite;
+ overflow-x:hidden;
+}
+@keyframes bgMove{
+ 0%{background-position:0% 50%}
+ 50%{background-position:100% 50%}
+ 100%{background-position:0% 50%}
+}
+.star{
+ position:fixed;top:-20px;color:#fff;
+ text-shadow:0 0 8px #69bfff;
+ pointer-events:none;z-index:0;
+ animation:fall linear infinite;
+}
+@keyframes fall{
+ to{transform:translateY(110vh) rotate(360deg);opacity:.2}
+}
+header{
+ position:relative;overflow:hidden;
+ background:linear-gradient(120deg,#073b70,#168acb,#7864d9);
+ background-size:200% 200%;
+ animation:gradient 8s ease infinite;
+ color:white;text-align:center;padding:65px 15px;
+ border-radius:0 0 35px 35px;
+ box-shadow:0 8px 25px #8ab9df;
+}
+@keyframes gradient{
+ 0%,100%{background-position:0% 50%}
+ 50%{background-position:100% 50%}
+}
+header h1{font-size:40px;margin:0 0 12px}
+header p{font-size:18px}
+nav{
+ position:sticky;top:0;z-index:10;background:#ffffffdd;
+ backdrop-filter:blur(12px);padding:16px;text-align:center;
+ box-shadow:0 3px 15px #b9d4e8;
+}
+nav a{
+ color:#07558d;text-decoration:none;font-weight:bold;
+ margin:10px;display:inline-block;transition:.3s;
+}
+nav a:hover{color:#9063db;transform:scale(1.1)}
+main{position:relative;z-index:1;max-width:1050px;margin:auto;padding:20px}
+h2{color:#07558d;font-size:26px}
+section{margin:38px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:23px}
+.card{
+ background:#ffffffed;border-radius:20px;overflow:hidden;
+ box-shadow:0 7px 22px #b9d5e8;
+ transition:transform .3s,box-shadow .3s;
+ border:1px solid #ffffff;
+}
+.card:hover{
+ transform:translateY(-8px) scale(1.015);
+ box-shadow:0 14px 30px #9ebfe0;
+}
+.card img{width:100%;height:220px;object-fit:cover;display:block}
+.card div{padding:19px}
 .card h3{color:#0876b5;margin:0 0 10px}
 .card p{line-height:1.9;margin:0}
-section{margin:35px 0}
-.quiz{background:white;padding:25px;border-radius:17px;box-shadow:0 5px 18px #dce7ef}
-button{background:#0876b5;color:white;border:0;padding:12px 20px;border-radius:9px;margin:5px;font-size:16px;cursor:pointer}
-button:hover{background:#064b7b}
-#result{font-weight:bold;color:#0876b5}
-footer{background:#073b70;color:white;text-align:center;padding:30px;margin-top:35px;line-height:2}
+.quiz{
+ background:#ffffffed;padding:25px;border-radius:20px;
+ box-shadow:0 7px 22px #b9d5e8;
+}
+button{
+ background:linear-gradient(120deg,#0876b5,#7664d9);
+ color:white;border:0;padding:13px 20px;
+ border-radius:12px;margin:6px;font-size:16px;
+ cursor:pointer;transition:.25s;
+}
+button:hover{transform:translateY(-3px);box-shadow:0 5px 15px #9bbce2}
+#result{font-weight:bold;color:#0876b5;min-height:25px}
+footer{
+ position:relative;z-index:1;
+ background:linear-gradient(120deg,#073b70,#168acb,#7864d9);
+ color:white;text-align:center;padding:30px;margin-top:40px;
+ line-height:2;border-radius:30px 30px 0 0;
+}
+footer h2{color:white}
 </style>
 </head>
+
 <body>
 
 <header>
@@ -45,6 +109,7 @@ footer{background:#073b70;color:white;text-align:center;padding:30px;margin-top:
 </nav>
 
 <main>
+
 <section id="facts">
 <h2>✨ معلومات مدهشة حول العالم</h2>
 <div class="grid">
@@ -55,22 +120,22 @@ footer{background:#073b70;color:white;text-align:center;padding:30px;margin-top:
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=900" alt="أمواج المحيط">
+<img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=900" alt="المحيط">
 <div><h3>🌊 المحيط الهادئ</h3><p>المحيط الهادئ هو أكبر محيطات العالم، ويضم جزرًا كثيرة.</p></div>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1614732484003-ef9881555dc3?w=900" alt="كوكب زحل">
+<img src="https://images.unsplash.com/photo-1614732484003-ef9881555dc3?w=900" alt="زحل">
 <div><h3>🪐 كوكب زحل</h3><p>يشتهر زحل بحلقاته الواسعة والجميلة التي تحيط به.</p></div>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=900" alt="النحل والعسل">
+<img src="https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=900" alt="النحل">
 <div><h3>🐝 النحل</h3><p>يساعد النحل على تلقيح الأزهار، كما ينتج العسل.</p></div>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=900" alt="منظر طبيعي بعد المطر">
+<img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=900" alt="منظر طبيعي">
 <div><h3>🌈 قوس قزح والمطر</h3><p>يظهر قوس قزح عندما يتفاعل ضوء الشمس مع قطرات الماء في الجو.</p></div>
 </div>
 
@@ -82,22 +147,22 @@ footer{background:#073b70;color:white;text-align:center;padding:30px;margin-top:
 <div class="grid">
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=900" alt="مكتبة الكتب">
+<img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=900" alt="الكتب">
 <div><h3>📚 الطباعة</h3><p>ساهمت الطباعة في نشر الكتب والمعرفة وجعلت التعلم أسهل.</p></div>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?w=900" alt="هاتف">
+<img src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?w=900" alt="الهاتف">
 <div><h3>📱 الهاتف</h3><p>غيّر الهاتف طريقة تواصل الناس مع بعضهم حول العالم.</p></div>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=900" alt="تقنيات إلكترونية">
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=900" alt="التقنية">
 <div><h3>🌐 الإنترنت</h3><p>سهّل الإنترنت الوصول إلى المعلومات والتواصل والتعلم.</p></div>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=900" alt="طائرة">
+<img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=900" alt="الطائرة">
 <div><h3>✈️ الطائرة</h3><p>ساعدت الطائرة الإنسان على السفر بين الدول والقارات بسرعة.</p></div>
 </div>
 
@@ -117,10 +182,11 @@ footer{background:#073b70;color:white;text-align:center;padding:30px;margin-top:
 <button onclick="next()">السؤال التالي</button>
 </div>
 </section>
+
 </main>
 
 <footer>
-<h2 style="color:white">🌍 بوابة الاكتشاف</h2>
+<h2>🌍 بوابة الاكتشاف</h2>
 <p>إعداد الطالب: فاضل جمعه الحراصي</p>
 <p>الصف: 10/5</p>
 <p>المادة: تقنية المعلومات</p>
@@ -128,24 +194,67 @@ footer{background:#073b70;color:white;text-align:center;padding:30px;margin-top:
 </footer>
 
 <script>
+// نجوم متحركة
+for(let i=0;i<35;i++){
+ let star=document.createElement("div");
+ star.className="star";
+ star.textContent="✦";
+ star.style.left=Math.random()*100+"%";
+ star.style.animationDuration=(7+Math.random()*12)+"s";
+ star.style.animationDelay=(-Math.random()*15)+"s";
+ star.style.fontSize=(9+Math.random()*13)+"px";
+ document.body.appendChild(star);
+}
+
+// أسئلة الاختبار
 const questions=[
 {q:"ما أكبر محيط في العالم؟",a:["الأطلسي","الهادئ","الهندي"],c:1},
 {q:"كم عدد قلوب الأخطبوط؟",a:["واحد","اثنان","ثلاثة"],c:2},
 {q:"أي اختراع سهّل التواصل؟",a:["الهاتف","الطائرة","الطباعة"],c:0},
 {q:"ما الكوكب المعروف بالكوكب الأحمر؟",a:["الزهرة","المريخ","زحل"],c:1}
 ];
+
 let current=0;
-function check(n){
-document.getElementById("result").textContent=
-n===questions[current].c?"إجابة صحيحة! أحسنت 🎉":"إجابة غير صحيحة، حاول مرة أخرى!";
+let audioContext;
+
+function playCorrectSound(){
+ try{
+  audioContext=audioContext||new (window.AudioContext||window.webkitAudioContext)();
+  if(audioContext.state==="suspended")audioContext.resume();
+  [523.25,659.25,783.99].forEach((frequency,i)=>{
+   let oscillator=audioContext.createOscillator();
+   let gain=audioContext.createGain();
+   oscillator.type="sine";
+   oscillator.frequency.value=frequency;
+   gain.gain.setValueAtTime(0.001,audioContext.currentTime+i*.13);
+   gain.gain.exponentialRampToValueAtTime(.16,audioContext.currentTime+i*.13+.03);
+   gain.gain.exponentialRampToValueAtTime(.001,audioContext.currentTime+i*.13+.22);
+   oscillator.connect(gain);
+   gain.connect(audioContext.destination);
+   oscillator.start(audioContext.currentTime+i*.13);
+   oscillator.stop(audioContext.currentTime+i*.13+.24);
+  });
+ }catch(e){}
 }
+
+function check(n){
+ if(n===questions[current].c){
+  document.getElementById("result").textContent="إجابة صحيحة! أحسنت 🎉✨";
+  playCorrectSound();
+ }else{
+  document.getElementById("result").textContent="إجابة غير صحيحة، حاول مرة أخرى 😊";
+ }
+}
+
 function next(){
-current=(current+1)%questions.length;
-document.getElementById("question").textContent=questions[current].q;
-document.getElementById("answers").innerHTML=questions[current].a.map((a,i)=>'<button onclick="check('+i+')">'+a+'</button>').join("");
-document.getElementById("result").textContent="";
+ current=(current+1)%questions.length;
+ document.getElementById("question").textContent=questions[current].q;
+ document.getElementById("answers").innerHTML=
+ questions[current].a.map((a,i)=>'<button onclick="check('+i+')">'+a+'</button>').join("");
+ document.getElementById("result").textContent="";
 }
 </script>
+
 </body>
 </html>
 ```
