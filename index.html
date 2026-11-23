@@ -7,48 +7,101 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>بوابة الاكتشاف</title>
 <style>
-body{margin:0;font-family:Tahoma;background:#eef6ff;color:#17345b}
-header{background:linear-gradient(120deg,#064b91,#168bd5);color:white;text-align:center;padding:45px 15px}
+body{margin:0;font-family:Tahoma,Arial;background:#edf6ff;color:#17345b}
+header{background:linear-gradient(130deg,#064b91,#168bd5);color:white;text-align:center;padding:45px 15px}
 header h1{font-size:36px}
-nav{background:white;padding:15px;text-align:center;position:sticky;top:0}
-nav a{color:#0755a5;text-decoration:none;font-weight:bold;margin:10px}
-main{max-width:900px;margin:auto;padding:15px}
-section{background:white;padding:22px;margin:20px 0;border-radius:15px;box-shadow:0 3px 12px #d4e3f2}
+nav{background:white;padding:15px;text-align:center;position:sticky;top:0;z-index:5;box-shadow:0 2px 8px #ddd}
+nav a{color:#0755a5;text-decoration:none;font-weight:bold;margin:8px}
+main{max-width:1000px;margin:auto;padding:15px}
 h2{color:#0875bd}
-.item{background:#edf6ff;padding:14px;margin:10px 0;border-radius:10px}
-button{background:#0875bd;color:white;border:0;padding:12px 20px;border-radius:8px;margin:5px;font-size:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.card{background:white;border-radius:15px;overflow:hidden;box-shadow:0 4px 12px #d2e3f3}
+.card img{width:100%;height:175px;object-fit:cover;display:block}
+.card div{padding:15px}
+.card h3{color:#0875bd;margin-top:0}
+section{margin:25px 0}
+.quiz{background:white;padding:22px;border-radius:15px;box-shadow:0 4px 12px #d2e3f3}
+button{background:#0875bd;color:white;border:0;padding:12px 20px;border-radius:9px;margin:5px;font-size:16px;cursor:pointer}
 #result{font-weight:bold;color:#0875bd}
-footer{background:#0755a5;color:white;text-align:center;padding:25px;margin-top:25px}
+footer{background:#0755a5;color:white;text-align:center;padding:25px;margin-top:30px}
 </style>
 </head>
 <body>
+
 <header>
 <h1>🌍 بوابة الاكتشاف</h1>
-<p>اكتشف معلومات جديدة وتعرّف على عجائب العالم!</p>
+<p>اكتشف العالم من حولك وتعلّم أشياء جديدة!</p>
 </header>
+
 <nav>
 <a href="#facts">معلومات مدهشة</a>
 <a href="#inventions">اختراعات</a>
 <a href="#quiz">اختبر نفسك</a>
 </nav>
+
 <main>
 <section id="facts">
 <h2>✨ معلومات مدهشة حول العالم</h2>
-<div class="item">🐙 للأخطبوط ثلاثة قلوب.</div>
-<div class="item">🌊 المحيط الهادئ أكبر محيطات العالم.</div>
-<div class="item">🪐 كوكب زحل يتميز بحلقاته الجميلة.</div>
-<div class="item">🐝 النحل يساعد النباتات على التكاثر عن طريق التلقيح.</div>
-<div class="item">🌈 قوس قزح يتكون نتيجة انكسار وانعكاس الضوء في قطرات الماء.</div>
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1545670723-196ed0954986?w=700" alt="الأخطبوط">
+<div><h3>🐙 الأخطبوط</h3><p>للأخطبوط ثلاثة قلوب، وهو من الكائنات البحرية الذكية.</p></div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=700" alt="المحيط">
+<div><h3>🌊 المحيط الهادئ</h3><p>المحيط الهادئ هو أكبر محيطات العالم.</p></div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1614732484003-ef9881555dc3?w=700" alt="كوكب زحل">
+<div><h3>🪐 كوكب زحل</h3><p>يتميز كوكب زحل بحلقاته الجميلة التي تحيط به.</p></div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=700" alt="النحل">
+<div><h3>🐝 النحل</h3><p>يساعد النحل النباتات على التكاثر عن طريق التلقيح.</p></div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=700" alt="الطبيعة">
+<div><h3>🌈 قوس قزح</h3><p>يتكون قوس قزح نتيجة تفاعل ضوء الشمس مع قطرات الماء.</p></div>
+</div>
+
+</div>
 </section>
+
 <section id="inventions">
 <h2>💡 اختراعات غيّرت العالم</h2>
-<div class="item"><b>الطباعة:</b> ساعدت على نشر الكتب والمعرفة.</div>
-<div class="item"><b>الهاتف:</b> سهّل التواصل بين الناس.</div>
-<div class="item"><b>الإنترنت:</b> جعل الوصول إلى المعلومات أسرع.</div>
-<div class="item"><b>الطائرة:</b> ساعدت الإنسان على السفر لمسافات بعيدة.</div>
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=700" alt="الكتب">
+<div><h3>📚 الطباعة</h3><p>ساعدت الطباعة على نشر الكتب والمعرفة بين الناس.</p></div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?w=700" alt="الهاتف">
+<div><h3>📱 الهاتف</h3><p>سهّل التواصل بين الأشخاص مهما ابتعدت المسافات.</p></div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=700" alt="التقنية">
+<div><h3>🌐 الإنترنت</h3><p>جعل الوصول إلى المعلومات والتواصل أسرع وأسهل.</p></div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=700" alt="الطائرة">
+<div><h3>✈️ الطائرة</h3><p>ساعدت الإنسان على السفر لمسافات بعيدة في وقت أقصر.</p></div>
+</div>
+
+</div>
 </section>
+
 <section id="quiz">
 <h2>🧠 اختبر معلوماتك</h2>
+<div class="quiz">
 <p id="question">ما أكبر محيط في العالم؟</p>
 <div id="answers">
 <button onclick="check(0)">الأطلسي</button>
@@ -57,15 +110,18 @@ footer{background:#0755a5;color:white;text-align:center;padding:25px;margin-top:
 </div>
 <p id="result"></p>
 <button onclick="next()">السؤال التالي</button>
+</div>
 </section>
 </main>
+
 <footer>
-<h3>بوابة الاكتشاف</h3>
+<h3>🌍 بوابة الاكتشاف</h3>
 <p>إعداد الطالب: فاضل جمعه الحراصي</p>
 <p>الصف: 10/5</p>
 <p>المادة: تقنية المعلومات</p>
 <p>© 2026 جميع الحقوق محفوظة</p>
 </footer>
+
 <script>
 const questions=[
 {q:"ما أكبر محيط في العالم؟",a:["الأطلسي","الهادئ","الهندي"],c:1},
@@ -87,4 +143,4 @@ document.getElementById("result").textContent="";
 </script>
 </body>
 </html>
-```
+``
